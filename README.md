@@ -19,94 +19,93 @@ Microsoft Word Office Add-in
 3.  Getting Started
     Follow these steps to get started with the Microsoft Word Office Add-ins for the template app:
 
-3.1. Clone the Repository
+    3.1. Clone the Repository
 
-Clone the repository using the following commands:
+    Clone the repository using the following commands:
 
-    git clone https://github.com/your-username/word-add-in-template-app.git
-    cd word-add-in-template-app
+        git clone https://github.com/Davidoff9/OfficeWordAdd-in.git
 
-3.2. Installation and Setup
+    3.2. Installation and Setup
 
-    1. Yeoman Generator vs. Visual Studio
+        1. Yeoman Generator vs. Visual Studio
 
-        When setting up your Microsoft Word Office Add-in project, you have two main options: using the Yeoman Generator for Office Add-ins or developing directly within Visual Studio.
+            When setting up your Microsoft Word Office Add-in project, you have two main options: using the Yeoman Generator for Office Add-ins or developing directly within Visual Studio.
 
-        Using Yeoman Generator:
+            Using Yeoman Generator:
+
+            Pros:
+
+                Quick Start: Yeoman generator provides a streamlined way to create a new Office Add-in project with the necessary files and structure.
+                Templates: Yeoman offers various templates to kick-start your project, saving time on setting up the initial structure.
+                Cross-Platform: Works across different operating systems (Windows, macOS, Linux).
+                Modern Technologies: Encourages the use of modern web technologies like HTML, CSS, and JavaScript.
+
+            Cons:
+
+                Learning Curve: If you're new to Yeoman, there might be a learning curve to understand its commands and options.
+                Customization: While the generator offers templates, you may need to make further adjustments to meet your project's specific needs.
+
+        2. Using Visual Studio:
 
         Pros:
 
-            Quick Start: Yeoman generator provides a streamlined way to create a new Office Add-in project with the necessary files and structure.
-            Templates: Yeoman offers various templates to kick-start your project, saving time on setting up the initial structure.
-            Cross-Platform: Works across different operating systems (Windows, macOS, Linux).
-            Modern Technologies: Encourages the use of modern web technologies like HTML, CSS, and JavaScript.
+            Integrated Environment: Visual Studio provides an integrated environment for Office Add-in development, combining coding, debugging, and testing.
+            UI Designers: Offers visual designers for creating UI components, making it easier for designers to contribute.
+            Advanced Features: Supports advanced coding features, debugging tools, and extensions for productivity.
+            Comprehensive: Offers templates for various Office Add-in types, making it suitable for a range of projects.
 
         Cons:
 
-            Learning Curve: If you're new to Yeoman, there might be a learning curve to understand its commands and options.
-            Customization: While the generator offers templates, you may need to make further adjustments to meet your project's specific needs.
+            Platform Dependent: Visual Studio is primarily available on Windows, which might limit collaboration on different platforms.
+            Heavier IDE: Visual Studio is a larger and more resource-intensive IDE compared to lightweight code editors.
+            Learning Curve: Mastering all of Visual Studio's features can take time, especially for developers new to the environment.
+            Ultimately, the choice between Yeoman and Visual Studio depends on your familiarity with the tools, the complexity of your project, and your preferred workflow. Yeoman offers a quick start and flexibility, while Visual Studio provides a powerful integrated environment for advanced development and design.
 
-    2. Using Visual Studio:
+    Using Yeoman Generator:
+    Install the required packages:
 
-    Pros:
+            npm install -g yo generator-office
 
-        Integrated Environment: Visual Studio provides an integrated environment for Office Add-in development, combining coding, debugging, and testing.
-        UI Designers: Offers visual designers for creating UI components, making it easier for designers to contribute.
-        Advanced Features: Supports advanced coding features, debugging tools, and extensions for productivity.
-        Comprehensive: Offers templates for various Office Add-in types, making it suitable for a range of projects.
+        Create a new Word Office Add-in project:
 
-    Cons:
+            yo office
 
-        Platform Dependent: Visual Studio is primarily available on Windows, which might limit collaboration on different platforms.
-        Heavier IDE: Visual Studio is a larger and more resource-intensive IDE compared to lightweight code editors.
-        Learning Curve: Mastering all of Visual Studio's features can take time, especially for developers new to the environment.
-        Ultimately, the choice between Yeoman and Visual Studio depends on your familiarity with the tools, the complexity of your project, and your preferred workflow. Yeoman offers a quick start and flexibility, while Visual Studio provides a powerful integrated environment for advanced development and design.
+        Follow the prompts to set up your project, choosing appropriate options.
 
-Using Yeoman Generator:
-Install the required packages:
+    3.3. Development
 
-        npm install -g yo generator-office
+        1. Open the project in Visual Studio Code:
 
-    Create a new Word Office Add-in project:
+            code .
 
-        yo office
+        2. Project Structure
 
-    Follow the prompts to set up your project, choosing appropriate options.
+            The project is structured as follows:
 
-3.3. Development
+            manifest.xml: This XML file is the heart of the Office Add-in. It defines the add-in's metadata, such as its name, description, icons, permissions, and entry points (like task panes, commands, etc.).
 
-    1. Open the project in Visual Studio Code:
+            src/taskpane/taskpane.css: This CSS file defines the styling for the task pane UI. Customize the styles here to ensure your add-in matches your desired look and feel.
 
-        code .
+            src/taskpane/taskpane.html: This HTML file represents the content of the task pane. You can modify this to create the user interface of your add-in.
 
-    2. Project Structure
+            src/taskpane/taskpane.js: The JavaScript file for the task pane logic. Add your scripting here to make your add-in interactive and functional.
 
-        The project is structured as follows:
+            src/commands/commands.js: This JavaScript file defines the actions that can be executed by buttons or other UI elements in your add-in. Link these actions to commands defined in the manifest.
 
-        manifest.xml: This XML file is the heart of the Office Add-in. It defines the add-in's metadata, such as its name, description, icons, permissions, and entry points (like task panes, commands, etc.).
+        3. Edit the Code
 
-        src/taskpane/taskpane.css: This CSS file defines the styling for the task pane UI. Customize the styles here to ensure your add-in matches your desired look and feel.
+            manifest.xml: Configure the add-in's metadata, permissions, entry points, and buttons.
 
-        src/taskpane/taskpane.html: This HTML file represents the content of the task pane. You can modify this to create the user interface of your add-in.
+            src/taskpane/taskpane.css: Modify the styling to create a visually appealing and consistent design.
 
-        src/taskpane/taskpane.js: The JavaScript file for the task pane logic. Add your scripting here to make your add-in interactive and functional.
+            src/taskpane/taskpane.html: Design the user interface using HTML elements and layout structures.
 
-        src/commands/commands.js: This JavaScript file defines the actions that can be executed by buttons or other UI elements in your add-in. Link these actions to commands defined in the manifest.
+            src/taskpane/taskpane.js: Implement JavaScript functionality to interact with the document and provide dynamic behavior.
 
-    3. Edit the Code
+            src/commands/commands.js: Define actions that can be triggered by user interaction and link them to commands in the manifest.
+            Edit the code in the src folder to implement your desired functionality.
 
-        manifest.xml: Configure the add-in's metadata, permissions, entry points, and buttons.
-
-        src/taskpane/taskpane.css: Modify the styling to create a visually appealing and consistent design.
-
-        src/taskpane/taskpane.html: Design the user interface using HTML elements and layout structures.
-
-        src/taskpane/taskpane.js: Implement JavaScript functionality to interact with the document and provide dynamic behavior.
-
-        src/commands/commands.js: Define actions that can be triggered by user interaction and link them to commands in the manifest.
-        Edit the code in the src folder to implement your desired functionality.
-
-        Test the add-in locally using the provided Word Desktop or Web version.
+            Test the add-in locally using the provided Word Desktop or Web version.
 
 4.  Customization and Extensions
     The project provides additional tools and scripts in the tools folder to enhance your development process. Here's an overview:
