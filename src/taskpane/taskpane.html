@@ -1,5 +1,4 @@
 <!-- Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT License. -->
-<!-- This file shows how to design a first-run page that provides a welcome screen to the user about the features of the add-in. -->
 
 <!DOCTYPE html>
 <html>
@@ -39,25 +38,18 @@
       </h2>
     </section>
     <main id="app-body" class="ms-welcome__main" style="display: none">
-      <h2 class="ms-font-xl">Discover what Office Add-ins can do!</h2>
-      <ul class="ms-List ms-welcome__features">
-        <li class="ms-ListItem">
-          <i class="ms-Icon ms-Icon--Ribbon ms-font-xl"></i>
-          <span class="ms-font-m">Achieve more with Office integration</span>
-        </li>
-        <li class="ms-ListItem">
-          <i class="ms-Icon ms-Icon--Unlock ms-font-xl"></i>
-          <span class="ms-font-m">Unlock features and functionality</span>
-        </li>
-        <li class="ms-ListItem">
-          <i class="ms-Icon ms-Icon--Design ms-font-xl"></i>
-          <span class="ms-font-m">Create and visualize like a pro</span>
-        </li>
-      </ul>
-      <p class="ms-font-l">Modify the source files, then click <b>Run</b>.</p>
-      <div role="button" id="run" class="ms-welcome__action ms-Button ms-Button--hero ms-font-xl">
-        <span class="ms-Button-label">Run</span>
-      </div>
+      <button class="ms-Button" id="insert-paragraph">Insert Paragraph</button><br /><br />
+      <button class="ms-Button" id="apply-style">Apply Style</button><br /><br />
+      <button class="ms-Button" id="apply-custom-style">Apply Custom Style</button><br /><br />
+      <button class="ms-Button" id="change-font">Change Font</button><br /><br />
+      <button class="ms-Button" id="insert-text-into-range">Insert Abbreviation</button><br /><br />
+      <button class="ms-Button" id="insert-text-outside-range">Add Version Info</button><br /><br />
+      <button class="ms-Button" id="replace-text">Change Quantity Term</button><br /><br />
+      <button class="ms-Button" id="insert-image">Insert Image</button><br /><br />
+      <button class="ms-Button" id="insert-html">Insert HTML</button><br /><br />
+      <button class="ms-Button" id="insert-table">Insert Table</button><br /><br />
+      <button class="ms-Button" id="create-content-control">Create Content Control</button><br /><br />
+      <button class="ms-Button" id="replace-content-in-control">Rename Service</button><br /><br />
     </main>
   </body>
 </html>
