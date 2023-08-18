@@ -78,7 +78,33 @@ Microsoft Word Office Add-in
 
             code .
 
-        2. Project Structure
+        2. Starting the project:
+
+            Windows:
+
+                Open Windows Terminal and navigate to your project's directory:
+
+                    cd path/to/your/word-add-in-project
+
+                Start the project using the following command:
+
+                    npm start
+
+                This command will build and launch the add-in in.
+
+            MacOS:
+
+                Open Terminal and navigate to your project's directory:
+
+                    cd path/to/your/word-add-in-project
+
+                Start the project using the following command:
+
+                    npm run dev-server
+
+                This command will build and launch the add-in in.
+
+        3. Project Structure
 
             The project is structured as follows:
 
@@ -92,7 +118,7 @@ Microsoft Word Office Add-in
 
             src/commands/commands.js: This JavaScript file defines the actions that can be executed by buttons or other UI elements in your add-in. Link these actions to commands defined in the manifest.
 
-        3. Edit the Code
+        4. Edit the Code
 
             manifest.xml: Configure the add-in's metadata, permissions, entry points, and buttons.
 
